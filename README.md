@@ -7,7 +7,7 @@ platform: AWS
 language: nodeJS
 authorLink: 'https://github.com/serverless'
 authorName: 'Serverless, inc.'
-authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
+
 -->
 
 # API Node.js com Serverless Framework em ambiente AWS
@@ -25,23 +25,22 @@ Pré requisitos:
 #### Credenciais AWS
 
 - Criar usuário: AWS Management Console -> IAM Dashboard -> Create New User -> <nome do usuário> -> Permissions "Administrator Access" -> Programmatic Access -> Dowload Keys
-- No terminal: ```$ aws configure``` -> colar as credenciais geradas anteriormente
+- No terminal: ``` aws configure``` -> colar as credenciais geradas anteriormente
 - 
 #### Configurar o framework Serverless
-```$ npm i -g serverless```
+``` npm i -g serverless```
 
 ### Desenvolvimento do projeto
  
 ```
-$ serverless
-Login/Register: No
-Update: No
-Type: Node.js REST API
-Name: dio-live
+
+serverless
+AWS - Node.js - HTTP API
+enter
+y
+
 ```
-```
-$ cd dio-live
-$ code .
+code .
 ``` 
 - No arquivo ```serverless.yml``` adicionar a região ```region: us-east-1``` dentro do escopo de ```provider:```
 - Salvar e realizar o deploy ```$ serverless deploy -v```
