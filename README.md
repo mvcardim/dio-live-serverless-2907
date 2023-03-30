@@ -42,11 +42,12 @@ y
 ```
 code .
 ``` 
-Faer o gitclone 
+Clonar o repositorio
+...gitclone https://github.com/mvcardim/dio-live-serverless-2907.git
 
 #### Estruturar o código
 
-- Criar o diretório "src" e mover o arquivo "handler.js" para dentro dele
+
 - Renomear o arquivo "handler.js" para "hello.js"
 - Atualizar o código 
 ```
@@ -60,7 +61,7 @@ module.exports = {
 ```
 handler: src/hello.handler
 ```
-```$ serverless deploy -v ```
+```serverless deploy -v ```
 
 #### DynamoDB
 Atualizar o arquivo serverless.yml
