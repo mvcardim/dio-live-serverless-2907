@@ -44,13 +44,15 @@ y
 code .
 ``` 
 Clonar o repositorio
-``` gitclone https://github.com/mvcardim/dio-live-serverless-2907.git```
+``` git clone https://github.com/mvcardim/dio-live-serverless-2907.git```
+
+cd dio-live-serverless-2907
 
 #### Estruturar o código
 
 
-- Renomear o arquivo "handler.js" para "hello.js"
-- Atualizar o código 
+- Atualizar o código:
+- Em serverless.ylm alterar a versao 
 
 ```
 const hello = async (event) => {
@@ -61,9 +63,21 @@ module.exports = {
 ```
 ```serverless deploy -v ```
 
-#### DynamoDB
-Atualizar o arquivo serverless.yml
 
+Atualizar o arquivo serverless.yml: 
+frameworkVersion: '2' para '3'
+runtime: nodejs18.x
+
+Remover arquivo serverless.yml inicial.
+
+#### DynamoDB
+Criaçao do #### DynamoDB.
+
+```
+cd ..
+serverless --org minha organizaçao
+serverless deploy -v
+```
 ```
 resources:
   Resources:
