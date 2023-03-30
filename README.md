@@ -42,8 +42,7 @@ y
 ```
 code .
 ``` 
-- No arquivo ```serverless.yml``` adicionar a região ```region: us-east-1``` dentro do escopo de ```provider:```
-- Salvar e realizar o deploy ```$ serverless deploy -v```
+Faer o gitclone 
 
 #### Estruturar o código
 
