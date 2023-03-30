@@ -10,7 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.955.0",
+    "aws-sdk": "^2.1346.0",
     "uuid": "^8.3.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvcardim/dio-live-serverless-2907.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mvcardim/dio-live-serverless-2907/issues"
+  },
+  "homepage": "https://github.com/mvcardim/dio-live-serverless-2907#readme"
 }

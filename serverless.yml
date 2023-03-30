@@ -1,14 +1,16 @@
+org: 7865677
+app: dio-live-project
 service: dio-live-project
 
-frameworkVersion: '2'
+frameworkVersion: '3'
 
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs18.x
   lambdaHashingVersion: '20201221'
   region: us-east-1
-  iam:
+
       role:
           statements:
             - Effect: Allow
@@ -18,8 +20,20 @@ provider:
                 - dynamodb:GetItem
                 - dynamodb:Scan
               Resource:
-                - arn:aws:dynamodb:us-east-1:167880115321:table/ItemTable
-                
+                - arn:aws:dynamodb:us-east-1:529936924120:table/ItemTable
+resources:
+  Resources:
+    ItemTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+          TableName: ItemTable
+          BillingMode: PAY_PER_REQUEST
+          AttributeDefinitions:
+            - AttributeName: id
+              AttributeType: S
+          KeySchema:
+            - AttributeName: id
+              KeyType: HASH
 functions:
   hello:
     handler: src/hello.handler
@@ -51,16 +65,3 @@ functions:
       - http:
           path: /items/{id}
           method: put
-resources:
-  Resources:
-    ItemTable:
-      Type: AWS::DynamoDB::Table
-      Properties:
-          TableName: ItemTable
-          BillingMode: PAY_PER_REQUEST
-          AttributeDefinitions:
-            - AttributeName: id
-              AttributeType: S
-          KeySchema:
-            - AttributeName: id
-              KeyType: HASH
