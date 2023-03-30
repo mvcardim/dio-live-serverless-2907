@@ -40,6 +40,7 @@ enter
 y
 
 ```
+```
 code .
 ``` 
 Clonar o repositorio
@@ -50,6 +51,7 @@ Clonar o repositorio
 
 - Renomear o arquivo "handler.js" para "hello.js"
 - Atualizar o código 
+
 ```
 const hello = async (event) => {
 /////
@@ -57,14 +59,11 @@ module.exports = {
     handler:hello
 }
 ```
-- Atualizar o arquivo "serverless.yml "
-```
-handler: src/hello.handler
-```
 ```serverless deploy -v ```
 
 #### DynamoDB
 Atualizar o arquivo serverless.yml
+
 ```
 resources:
   Resources:
