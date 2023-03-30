@@ -43,7 +43,7 @@ y
 code .
 ``` 
 Clonar o repositorio
-''' gitclone https://github.com/mvcardim/dio-live-serverless-2907.git '''
+``` gitclone https://github.com/mvcardim/dio-live-serverless-2907.git```
 
 #### Estruturar o código
 
@@ -105,8 +105,9 @@ resources:
    ```npm i uuid aws-sdk```
    
   - Atualizar lista de funções no arquivo serverless.yml
-  ```
-  functions:
+  
+```
+functions:
   hello:
     handler: src/hello.handler
     events:
