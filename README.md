@@ -25,7 +25,7 @@ Pré requisitos:
 #### Credenciais AWS
 
 - Criar usuário: AWS Management Console -> IAM Dashboard -> Create New User -> <nome do usuário> -> Permissions "Administrator Access" -> Programmatic Access -> Dowload Keys
-- No terminal: ``` aws configure``` -> colar as credenciais geradas anteriormente
+- No terminal: aws configure -> colar as credenciais geradas anteriormente
 - 
 #### Configurar o framework Serverless
 ``` npm i -g serverless```
@@ -43,7 +43,7 @@ y
 code .
 ``` 
 Clonar o repositorio
-...gitclone https://github.com/mvcardim/dio-live-serverless-2907.git
+''' gitclone https://github.com/mvcardim/dio-live-serverless-2907.git '''
 
 #### Estruturar o código
 
